@@ -1,4 +1,5 @@
 export default function Task({...items}){
+  return(
      <>
         <details className="task">
         <summary>
@@ -12,4 +13,5 @@ export default function Task({...items}){
         </span>
       </details>
     </>
+  )
 }
