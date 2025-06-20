@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './tasks.css'
 import TaskManager from './TaskManager';
 
