@@ -1,3 +1,4 @@
+import { MdDelete } from "react-icons/md";
 export default function Task({...items}){
   return(
      <>
@@ -5,7 +6,7 @@ export default function Task({...items}){
         <summary>
           <div className="task-meta">
             <input type="checkbox" name="" id="" />
-            <h3>{items.taskTitle} <span> (see details)</span></h3>
+            <h3>{items.taskTitle} <span> (see details)</span><MdDelete className="delete-icon"/></h3>
           </div>
         </summary>
         <span className="task-description"> 

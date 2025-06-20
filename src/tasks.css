@@ -182,11 +182,25 @@ form .add-task{
   top: 0;
   background-color: #fff;
   z-index: 9;
+  width: 100%;
+}
+
+.tasks-container .task summary h3{
+  position: relative;
+  border: 1px solid red ;
+  min-width: full;
 }
 
 .task-meta{
-   display: flex;
+  display: flex;
   gap: 1rem;
+}
+
+.delete-icon{
+  position: absolute;
+  right: 2rem;
+  color: rgb(213, 57, 0);
+  font-size: 1.6rem;
 }
 
 .tasks-container .task span.task-description{
