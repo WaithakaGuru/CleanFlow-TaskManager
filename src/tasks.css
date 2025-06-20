@@ -1,0 +1,195 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html{
+  font-size: 15px;
+}
+
+body{ 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+#root{
+  width: 96%;
+  min-width: 350px;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  min-height: 10rem;
+  height: max-content;
+}
+
+h2.logo{
+  color: #222;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  background-color: #fff;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+h2.logo img{
+  height: 5rem;
+  width: 4rem;
+}
+
+h2.logo span{
+  color: rgb(214, 118, 2);
+  font-style: italic;
+  margin-right: .5rem;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  background-color: #22222208;
+  border-radius: .5rem;
+  border: 2px solid #222;
+  overflow-x: hidden;
+}
+
+.input-holder, form .items{
+  width: 100%;
+}
+
+.input-holder{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-holder input.task-title, form textarea{
+  outline: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 1px solid #222;
+  color:  rgb(107, 70, 2);
+  border-radius: .5rem;
+}
+
+:is(.input-holder input.task-title, form textarea)::placeholder{
+  color: rgb(107, 70, 2);
+}
+
+form textarea.task-description{
+  min-width: 80%;
+  max-width: 91.5%; 
+  height: 6rem;
+  max-height: 4rem;
+  overflow-y: auto;
+  outline: none;
+}
+
+form label{
+  font-weight: bold;
+  color: rgb(214, 118, 2)
+}
+
+form .items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form .add-task{
+  color: rgb(214, 118, 2);
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  border: 1px solid #222;
+  padding: .8rem 2rem;
+  font-weight: bold;
+  background-color: #fff;
+  width: 100%;
+  min-width: 100%;
+  cursor: pointer;
+}
+
+.tasks-container{
+  background-color: #22222208;
+  min-height: 16rem;
+  overflow-y: auto;
+  width: 93.5%;
+  margin: -1.5rem auto 2rem;
+  margin-bottom: 2rem !important;
+  border: 2px solid #222;
+  border-radius: 0 0 .5rem .5rem;
+  border-top-color: transparent;
+  padding: 0 1rem;
+}
+
+.tasks-container h2{
+  text-align: center;
+  margin-bottom: 0;
+  color:rgb(107, 70, 2);
+  padding: .7rem; 
+}
+
+.tasks-container .task h3{
+  color: rgb(214, 118, 2);
+}
+
+.tasks-container .task h3, .task input{
+  margin-top: -.8rem;
+}
+
+.tasks-container .task {
+  border: 1px solid #222;
+  padding: .6rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: .4rem;
+  margin: 0 auto 1rem;
+  border-left-width: 1rem;
+  border-left-color: rgb(107, 70, 2);;
+  max-height: 5rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.tasks-container .task summary  {
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 9;
+}
+
+.task-meta{
+   display: flex;
+  gap: 1rem;
+}
+
+.tasks-container .task span.task-description{
+  color: rgb(107, 70, 2);
+  font-size: 1rem;
+}
