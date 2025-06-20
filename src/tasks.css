@@ -175,20 +175,22 @@ form .add-task{
   background-color: #fff;
 }
 
-.tasks-container .task summary  {
+.tasks-container .task summary.task-summary  {
   display: flex;
   gap: 1rem;
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 9;
-  width: 100%;
 }
 
-.tasks-container .task summary h3{
+.tasks-container .task summary.task-summary h3{
+  width: 690px;
+  text-overflow: ellipsis;
   position: relative;
-  border: 1px solid red ;
-  min-width: full;
+  text-wrap: nowrap;
+  overflow: hidden;
+  max-width: 80%;
 }
 
 .task-meta{
@@ -198,7 +200,8 @@ form .add-task{
 
 .delete-icon{
   position: absolute;
-  right: 2rem;
+  right: 3rem;
+  top: -.5rem;
   color: rgb(213, 57, 0);
   font-size: 1.6rem;
 }

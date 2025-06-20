@@ -12,7 +12,7 @@ function TaskManager  () {
             alert("Task Title field is required !!");
             return;
         }
-        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription}]);
+        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription, }]);
         setTaskTitle("");
         setTaskDescription("");
     }
