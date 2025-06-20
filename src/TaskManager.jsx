@@ -14,7 +14,7 @@ function TaskManager  () {
             alert("All task fields are required !!");
             return;
         }
-        setTasks(previousTasks => [{id:randomId(), taskTitle, taskDescription}, ...previousTasks])
+        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription}])
     }
     return(
         <>
