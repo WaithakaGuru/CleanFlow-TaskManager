@@ -1,5 +1,5 @@
 import './tasks.css'
-import TaskManager from './TaskManager';
+import TaskManager from './components/TaskManager';
 
 function CleanFlow () {
   return (

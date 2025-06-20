@@ -1,8 +1,6 @@
 import Task from "./Task";
-import { useState } from "react";
-
-export const  randomId = () => crypto.randomUUID();
-
+import  { useState } from "react";
+import { randomId } from "../utils/utils";
 function TaskManager  () {
     const [taskTitle, setTaskTitle] = useState("");
     const [taskDescription, setTaskDescription] = useState("");
@@ -10,11 +8,13 @@ function TaskManager  () {
 
     function handleAddTask(e) {
         e.preventDefault();
-        if(!taskDescription || !taskTitle){
-            alert("All task fields are required !!");
+        if(!taskTitle){
+            alert("Task Title field is required !!");
             return;
         }
-        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription}])
+        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription}]);
+        setTaskTitle("");
+        setTaskDescription("");
     }
     return(
         <>
@@ -23,13 +23,15 @@ function TaskManager  () {
                     <label htmlFor="taskTitle">Task Title</label>
                     <input type="text" id="taskTitle"
                     placeholder="Task Title..." className="task-title"
+                    value={taskTitle}
                     onChange={e => setTaskTitle(e.target.value)}
                     />
                 </div>
                 <div className="items">
-                    <label htmlFor="taskDecription">Describe your task</label>
+                    <label htmlFor="taskDescription">Describe your task</label>
                     <textarea name="" id="taskDescription" 
                     placeholder="Describe your task..." 
+                    value={taskDescription}
                     onChange={e => setTaskDescription(e.target.value)}
                     className='task-description'
                     ></textarea>
@@ -40,8 +42,8 @@ function TaskManager  () {
              <h2>The Currently Scheduled tasks</h2>
              <div className="tasks-holder">
              {
-                tasks? "No Tasks Added Yet!!":
-                tasks.map(task => <Task {...task} />)
+                (tasks.length == 0) ? "No Tasks Added Yet!!":
+                tasks.map(task => <Task {...task} key={task.id} />)
              }
              </div>
             </div>
