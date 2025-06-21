@@ -12,7 +12,7 @@ function TaskManager  () {
             alert("Task Title field is required !!");
             return;
         }
-        setTasks(previousTasks => [...previousTasks, {id:randomId(), taskTitle, taskDescription, }]);
+        setTasks(previousTasks => [{id:randomId(), taskTitle, taskDescription}, ...previousTasks]);
         setTaskTitle("");
         setTaskDescription("");
     }
@@ -39,7 +39,7 @@ function TaskManager  () {
                     <button className="add-task" onClick={handleAddTask}>Add Task</button>
             </form>
             <div className="tasks-container">
-             <h2>The Currently Scheduled tasks</h2>
+             <h2>Currently Scheduled tasks</h2>
              <div className="tasks-holder">
              {
                 (tasks.length == 0) ? "No Tasks Added Yet!!":

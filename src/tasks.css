@@ -16,7 +16,7 @@
 }
 
 html{
-  font-size: 15px;
+  font-size: 12px;
 }
 
 body{ 
@@ -33,7 +33,7 @@ body{
 #root{
   width: 96%;
   min-width: 350px;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto 2rem;
   min-height: 10rem;
   height: max-content;
@@ -185,12 +185,13 @@ form .add-task{
 }
 
 .tasks-container .task summary.task-summary h3{
-  width: 690px;
+  width: 46rem;
   text-overflow: ellipsis;
   position: relative;
   text-wrap: nowrap;
   overflow: hidden;
   max-width: 80%;
+  cursor: pointer;
 }
 
 .task-meta{
